@@ -5,20 +5,20 @@
 class Bakusai < Formula
   desc "cli for bakusai.com"
   homepage ""
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.2/bakusai_0.1.2_darwin_amd64.zip"
-      sha256 "8c15b7fc14a73ec30c72348ff9711fd8704787743fadc294d18f0ae9076678f7"
+    if Hardware::CPU.arm?
+      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.3/bakusai_0.1.3_darwin_arm64.zip"
+      sha256 "0bba1c5be3661612533fe3f42ed4096acb15d9b112e27077908bbfcd302be5a6"
 
       def install
         bin.install "bakusai"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.2/bakusai_0.1.2_darwin_arm64.zip"
-      sha256 "cf30bb7022419917cfc7cfa5e339bbaf23d08964e971c28f3b5d807f3260ff0a"
+    if Hardware::CPU.intel?
+      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.3/bakusai_0.1.3_darwin_amd64.zip"
+      sha256 "4a66216712512aa966220dc30d4be6799fb99ef44d30cc9e24c4d1ea98ef681b"
 
       def install
         bin.install "bakusai"
@@ -28,16 +28,16 @@ class Bakusai < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.2/bakusai_0.1.2_linux_arm64.zip"
-      sha256 "857d8f0ede76cc3206ff8a8cd81162b3e751ac77405fc26a88e3051f3543e920"
+      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.3/bakusai_0.1.3_linux_arm64.zip"
+      sha256 "d52bd87d61875d506b5fe094a5c2335231e1d2ad1d5658e94c601241974f8192"
 
       def install
         bin.install "bakusai"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.2/bakusai_0.1.2_linux_amd64.zip"
-      sha256 "952d626380ca75bf818109938316c9974b8de4e55de3551c093c4a148eb04da5"
+      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.3/bakusai_0.1.3_linux_amd64.zip"
+      sha256 "601b8ef21face7b1447ddff4ec4baac2faded0d688af5d8bb988b9530db60b6c"
 
       def install
         bin.install "bakusai"
