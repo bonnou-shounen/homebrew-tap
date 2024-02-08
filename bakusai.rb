@@ -5,20 +5,20 @@
 class Bakusai < Formula
   desc "cli for bakusai.com"
   homepage ""
-  version "0.1.8"
+  version "0.1.10"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.8/bakusai_0.1.8_darwin_arm64.zip"
-      sha256 "f76b8a2e55c1a6f47105232b7842780e90f6c382bfa9745c7454f790f7767758"
+      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.10/bakusai_0.1.10_darwin_arm64.zip"
+      sha256 "f41ecc3ca89305a35a907ad8189e74f2c291b4199f8b52bb260c2fd2e1974773"
 
       def install
         bin.install "bakusai"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.8/bakusai_0.1.8_darwin_amd64.zip"
-      sha256 "4a140a4fd7e3dfd984d5a3988d35ff18d1b2bd29164f3d42fade18acb9ee64a0"
+      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.10/bakusai_0.1.10_darwin_amd64.zip"
+      sha256 "3403465b3c1ce400820735fde8e76821c2636182dada5137181889b82fef0598"
 
       def install
         bin.install "bakusai"
@@ -27,17 +27,17 @@ class Bakusai < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.8/bakusai_0.1.8_linux_arm64.zip"
-      sha256 "4315acefa07f3f8bdaa1c548047694d88702d957378c0e7c0e59d14e71243493"
+    if Hardware::CPU.intel?
+      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.10/bakusai_0.1.10_linux_amd64.zip"
+      sha256 "21405de738d3df50798c0d7d767bf97878f1891bf5028225a75a40a8db722a46"
 
       def install
         bin.install "bakusai"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.8/bakusai_0.1.8_linux_amd64.zip"
-      sha256 "62df13518c02e07711e8f205575cc87e33ea579a04868e00868dfff324aa7e3b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bonnou-shounen/bakusai/releases/download/v0.1.10/bakusai_0.1.10_linux_arm64.zip"
+      sha256 "e2b9c0a91a42f2eacd2bc7d782fe1efde7285bb010a2d94e626fc73fe499f24c"
 
       def install
         bin.install "bakusai"
