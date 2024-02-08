@@ -5,20 +5,20 @@
 class Cityheaven < Formula
   desc "cli for www.cityheaven.net"
   homepage ""
-  version "0.1.4"
+  version "0.1.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bonnou-shounen/cityheaven/releases/download/v0.1.4/cityheaven_0.1.4_darwin_arm64.zip"
-      sha256 "92b996a39ba1e3c707dc803ce2a9e16d4cdb291a0be7b968fbe675477c3563ea"
+      url "https://github.com/bonnou-shounen/cityheaven/releases/download/v0.1.5/cityheaven_0.1.5_darwin_arm64.zip"
+      sha256 "915379fe1326524cfa40beabedd4170f95340a9a13c3c98826d63d587553bf11"
 
       def install
         bin.install "cityheaven"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bonnou-shounen/cityheaven/releases/download/v0.1.4/cityheaven_0.1.4_darwin_amd64.zip"
-      sha256 "4315cf79d8fca731a3ddef7981614094c3161aa22196bc7d803c19d29f90cda9"
+      url "https://github.com/bonnou-shounen/cityheaven/releases/download/v0.1.5/cityheaven_0.1.5_darwin_amd64.zip"
+      sha256 "50f450e476fdefd9ba23d16a5a9723d8891d4c53344a7b5a39b3888c8604db09"
 
       def install
         bin.install "cityheaven"
@@ -27,17 +27,17 @@ class Cityheaven < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bonnou-shounen/cityheaven/releases/download/v0.1.4/cityheaven_0.1.4_linux_arm64.zip"
-      sha256 "920c109f05597f9937a929b1b53d1bc64001f99b098a1cd260e475133d00ce80"
+    if Hardware::CPU.intel?
+      url "https://github.com/bonnou-shounen/cityheaven/releases/download/v0.1.5/cityheaven_0.1.5_linux_amd64.zip"
+      sha256 "7a9f20de9cc51f39c59748a946b94a10d274d3223d4d62fbba6949d4574c5226"
 
       def install
         bin.install "cityheaven"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bonnou-shounen/cityheaven/releases/download/v0.1.4/cityheaven_0.1.4_linux_amd64.zip"
-      sha256 "3027f0011c2df334d646959ccad97a4cac907e1436756cd62e613c0eab946466"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bonnou-shounen/cityheaven/releases/download/v0.1.5/cityheaven_0.1.5_linux_arm64.zip"
+      sha256 "161da8765a76f500733603b883bb18ca69b74dd61d605237881831f4d48aaa38"
 
       def install
         bin.install "cityheaven"
